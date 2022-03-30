@@ -3,7 +3,7 @@ from playwright.sync_api import Playwright, sync_playwright
 from pom.home_page_elements import HomePage
 
 
-def test_main_page(playwright: Playwright) -> None:
+def do_test(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
@@ -15,4 +15,4 @@ def test_main_page(playwright: Playwright) -> None:
 
 
 with sync_playwright() as playwright:
-    test_main_page(playwright)
+    do_test(playwright)
