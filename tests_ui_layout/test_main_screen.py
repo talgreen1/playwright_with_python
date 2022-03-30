@@ -13,6 +13,5 @@ def do_test(playwright: Playwright) -> None:
     assert page.is_visible(HomePage.celebrating_beauty_body)
     assert page.is_visible(HomePage.celebrating_beauty_header)
 
-
 with sync_playwright() as playwright:
     do_test(playwright)
