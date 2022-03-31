@@ -5,6 +5,10 @@ Run all tests:
 Run with verbos:  
 ```pytest -v```
 
+Run tests in parallel:
+```pytest -n 3```
+
+
 ##Custom Markers
 Run custom marker:  
 ```pytest -m smoke ```
