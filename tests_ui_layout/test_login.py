@@ -1,6 +1,8 @@
+import pytest
 from playwright.sync_api import Playwright
 
 
+@pytest.mark.integ
 def test_login(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
