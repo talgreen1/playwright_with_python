@@ -3,11 +3,8 @@ from playwright.sync_api import Playwright
 
 
 @pytest.mark.integ
-def test_login(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context()
-    page = context.new_page()
-    page.goto("https://symonstorozhenko.wixsite.com/website-1")
+def test_login(set_up) -> None:
+    page = set_up
     page.wait_for_timeout(1000)
 
     page.locator("text=Log in").click()
