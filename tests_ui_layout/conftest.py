@@ -2,7 +2,9 @@ import pytest
 
 
 @pytest.fixture
-def set_up(page):
+def set_up(browser):
+    context = browser.new_context()
+    page = context.new_page()
     page.set_default_timeout(30000)
     page.goto("https://symonstorozhenko.wixsite.com/website-1")
 
