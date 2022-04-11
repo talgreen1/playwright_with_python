@@ -1,6 +1,6 @@
 import pytest
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="session")
 def func_fixture():
     print("\nIn func fixture")
 #
